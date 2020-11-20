@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Kurs Rupiah</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function kurs() {
+
+            let k = document.getElementById("kurs").value;
+
+            if (k == 1) {
+                input = document.getElementById("nilai").value;
+                nilai = 9915;
+                hitung = nilai * input;
+                document.getElementById("rupiah").value = hitung;
+            }else if (k == 2) {
+                input = document.getElementById("nilai").value;
+                nilai = 13472;
+                hitung = nilai * input;
+                document.getElementById("rupiah").value = hitung;
+            }else if (k == 3) {
+                input = document.getElementById("nilai").value;
+                nilai = 874;
+                hitung = nilai * input;
+                document.getElementById("rupiah").value = hitung;
+            }else if (k == 4) {
+                input = document.getElementById("nilai").value;
+                nilai = 120;
+                hitung = nilai * input;
+                document.getElementById("rupiah").value = hitung;
+            }else if (k == 5) {
+                input = document.getElementById("nilai").value;
+                nilai = 15888;
+                hitung = nilai * input;
+                document.getElementById("rupiah").value = hitung;
+            }else if (k == 6) {
+                input = document.getElementById("nilai").value;
+                nilai = 3592;
+                hitung = nilai * input;
+                document.getElementById("rupiah").value = hitung;
+            }
+        }
+    </script>
+    <div>
+        <label for="">Dalam Rupiah</label>
+         <input onkeyup="kurs()" style="width: 20%" placeholder="Masukan Nilai" type="number" name="nilai" id="nilai">
+        <label for="">Value</label>   
+            <select onchange="kurs()" id="kurs" style="width: 20%" >
+                <option style="color: black;" value="0">--Ubah Kurs--</option>
+                <option style="color: black;" value="1">Dollar US</option>
+                <option style="color: black;" value="2">Dollar Singapore</option>
+                <option style="color: black;" value="3">Ringgit Malaysia</option>
+                <option style="color: black;" value="4">Yen Jepang</option>
+                <option style="color: black;" value="5">Euro</option>
+                <option style="color: black;" value="6">Riyal Arab Saudi</option>
+            </select><br>
+    <label for="">Nilai Rupiah</label>
+    <input type="text" disabled="" id="rupiah" placeholder="Nilai Rupiah" style="width: 20%" name="rupiah">
+    </div>
+</body>
+</html> 

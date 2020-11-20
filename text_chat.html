@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>	<title>Text Chat</title>
+        <H1 id=" Header">Text Chat For Me</H1>
+
+    <script type="text/javascript">	
+        function kirim() {	
+        let pesan = document.getElementById("pesan").value;		
+        document.getElementById("isichat").innerHTML += pesan+"<br/>";		
+        document.getElementById("pesan").value = "";		
+        return false;	}
+    </script>
+
+<body >
+    <style>
+        body{
+            font-family :'calibri', 
+        }
+    </style>
+
+    <div style="width: 50%; stroke: brown;" id="isichat">			
+    </div>	
+         
+        <form style="text-align:start;" onsubmit="return kirim();">		
+            <input id="pesan" style="width: 30%;" placeholder="Masukan sebuah text chat" type="text" name="pesan">		
+            <button type="submit" onclick="return kirim();">KIRIM</button>	
+        </form>	
+</body>
+</html>
